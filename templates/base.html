@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask Course{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Westside Decodes</h1>
+        <hr>
+        <nav aria-label="Main navigation">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+        <hr>
+    </main>
+    <footer>
+        <p>&copy; 2026 Westside Decodes. All rights reserved.</p>  
+    </footer>
+</body>
+</html>
