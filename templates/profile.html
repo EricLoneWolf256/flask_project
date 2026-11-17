@@ -12,9 +12,13 @@
 </head>
 <body>
     <div class="card">
-        <!-- Jinja2 placeholders filled by Python -->
-        <h1>Welcome back, {{ username }}!</h1>
-        <p>This page was generated dynamically just for you.</p>
+        {#<!-- Jinja2 placeholders filled by Python -->#}
+         <h2>{{"Welcome, " + first_name | title}}</h2>
+        <h1>{{ first_name | upper}} {{ last_name | upper }}</h1>
+        <p>The Total Courses: {{ course | length }}</p>
+        <p>I live in City: {{city}}</p>
+        <p>The price of this course is ${{price}}</p>
+        <p>GST Included Price: ${{price * 1.1}}</p>
     </div>
 </body>
 </html>
